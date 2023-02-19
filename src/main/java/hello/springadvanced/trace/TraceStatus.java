@@ -1,6 +1,6 @@
 package hello.springadvanced.trace;
 
-public class TraceStatus {
+public class    TraceStatus {
     private TraceId traceId;
     private Long startTimeMs;
     private String message;

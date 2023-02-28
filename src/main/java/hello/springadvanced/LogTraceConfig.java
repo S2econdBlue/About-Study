@@ -10,6 +10,6 @@ import org.springframework.context.annotation.Configuration;
 public class LogTraceConfig {
     @Bean
     public LogTrace logTrace(){
-        return new ThreadLocalLogTrace()  ;
+        return new ThreadLocalLogTrace();
     }
 }

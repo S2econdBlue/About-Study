@@ -1,22 +1,22 @@
-package hello.springadvanced.trace.template;
+package hello.springadvanced.trace.callback;
 
 import hello.springadvanced.trace.TraceStatus;
 import hello.springadvanced.trace.logtrace.LogTrace;
 
-public abstract class AbstractTemplate<T> {
+public class TraceTemplate {
     private final LogTrace trace;
 
-    public AbstractTemplate(LogTrace trace) {
+    public TraceTemplate(LogTrace trace) {
         this.trace = trace;
     }
 
-    public T execute(String message){
+    public <T> T execute(String message, TraceCallback<T> callback) {
         TraceStatus status = null;
 
         try {
             status = trace.begin(message);
             // 로직 호출
-            T result = call();
+            T result = callback.call();
             trace.end(status);
             return result;
         } catch (Exception e) {
@@ -24,7 +24,6 @@ public abstract class AbstractTemplate<T> {
             throw e;
         }
 
-    }
-    protected abstract T call();
 
+    }
 }

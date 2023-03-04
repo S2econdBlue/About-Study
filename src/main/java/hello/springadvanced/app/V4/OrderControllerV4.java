@@ -1,6 +1,6 @@
 package hello.springadvanced.app.V4;
 
-import hello.springadvanced.trace.TraceStatus;
+import hello.springadvanced.app.OrderServiceV4;
 import hello.springadvanced.trace.logtrace.LogTrace;
 import hello.springadvanced.trace.template.AbstractTemplate;
 import lombok.RequiredArgsConstructor;

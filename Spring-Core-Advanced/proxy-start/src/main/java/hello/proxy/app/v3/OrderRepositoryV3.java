@@ -1,4 +1,4 @@
-package hello.proxy.app.V3;
+package hello.proxy.app.v3;
 
 import org.springframework.stereotype.Repository;
 

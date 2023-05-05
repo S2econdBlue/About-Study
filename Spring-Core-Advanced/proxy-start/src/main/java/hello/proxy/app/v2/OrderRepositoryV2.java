@@ -1,6 +1,4 @@
-package hello.proxy.app.V2;
-
-import hello.proxy.app.v1.OrderRepositoryV1;
+package hello.proxy.app.v2;
 
 public class OrderRepositoryV2 {
     public void save(String itemId) throws IllegalAccessException {
@@ -13,7 +11,7 @@ public class OrderRepositoryV2 {
     private void sleep(int millis) {
         try {
             Thread.sleep(millis);
-        }catch (InterruptedException e){
+        }catch (Exception e){
             e.printStackTrace();
         }
     }

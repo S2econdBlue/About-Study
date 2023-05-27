@@ -1,6 +1,9 @@
 package hello.proxy.app.v1;
 
 
+import hello.proxy.userAnnotation.MyAnnotation;
+
+@MyAnnotation(age = 22, sex = 'S', phoneNumber = "010-4332-8308")
 public class OrderControllerV1Impl implements OrderControllerV1{
     private final OrderServiceV1 orderService;
 
